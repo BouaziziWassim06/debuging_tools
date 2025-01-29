@@ -1,0 +1,57 @@
+{
+    "age": {
+        "display": "id",
+        "collecting": 1,
+        "confidence": 0.793386,
+        "id": [0,1,2,3]
+    },
+    "body_pose": {}
+    ,
+    "distraction": {
+        "display": "distracted",
+        "confidence": 0.9932,
+        "distracted": [true,false]
+    },
+    "drowsiness": {
+        "display": "drowsy",
+        "confidence": 0,
+        "drowsy": [true,false]
+    },
+    "height": {
+        "display": "id",
+        "collecting": 0,
+        "confidence": 0.563585,
+        "id": [0,1,2]
+    },
+    "occupation": {
+        "display": "occupied",
+        "confidence": 1,
+        "occupied": [true,false]
+    },
+    "out-of-position": {
+        "display": ["out-of-position","out-of-position-class"],
+        "confidence": 1,
+        "out-of-position": [true,false],
+        "out-of-position-class": [0,1,2,3,4,5]
+    },
+    "seatbelt": {
+        "display": "visible",
+        "confidence": 0,
+        "visible": [true,false]
+    },
+    "sender-id": 0,
+    "sex": {
+        "display": "id",
+        "collecting": 1,
+        "confidence": 0.793386,
+        "id": [1,2]
+    },
+    "state": "tracking",
+    "timestamp": "20241120T150853.547871",
+    "weight": {
+        "display": "id",
+        "collecting": 1,
+        "confidence": 0.793386,
+        "id": [1, 2]
+    }
+}

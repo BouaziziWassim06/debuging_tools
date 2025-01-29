@@ -1,0 +1,187 @@
+mqtt:
+  DEFAULT_QOS: 1
+  SUB_TOPICS: {}
+  RETRY_S: 1
+  #HOST: 192.168.1.150
+  HOST: 127.0.0.1
+  PORT: 1883
+  FUNCT_NAME: "MQTT_TESTER1"
+
+Motors:
+  Backrest:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Backrest/CustomBeforeLaunch/1/Backrest/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Backrest/CustomBeforeLaunch/1/Backrest/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Backrest/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Backrest/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Backrest/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Backrest/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Backrest/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Backrest/Status"
+    position: 0
+    speed: 1
+    delay: 0
+  
+  Height:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Height/CustomBeforeLaunch/1/Height/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Height/CustomBeforeLaunch/1/Height/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Height/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Height/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Height/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Height/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Height/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Height/Status"
+      height_motor_energy_consumed  : Actium/MQTTAccessV_1_0/Devices/Height/CAN/Read/EnergyConsumed/Value
+ 
+    position: 0
+    speed: 1
+    delay: 0
+
+  Track:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Track/CustomBeforeLaunch/1/Track/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Track/CustomBeforeLaunch/1/Track/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Track/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Track/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Track/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Track/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Track/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Track/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  UBA:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_UBA/CustomBeforeLaunch/1/UBA/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_UBA/CustomBeforeLaunch/1/UBA/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_UBA/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_UBA/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/UBA/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/UBA/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_UBA/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_UBA/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Headrest:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Headrest/CustomBeforeLaunch/1/Headrest/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Headrest/CustomBeforeLaunch/1/Headrest/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Headrest/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Headrest/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Headrest/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Headrest/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Headrest/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Headrest/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Tilt:
+    status: True
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Tilt/CustomBeforeLaunch/1/Tilt/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Tilt/CustomBeforeLaunch/1/Tilt/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Tilt/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Tilt/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Tilt/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Tilt/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Tilt/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Tilt/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Bolster_Cush_L:
+    status: False
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_L/CustomBeforeLaunch/1/Bolster_Cush_L/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_L/CustomBeforeLaunch/1/Bolster_Cush_L/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_L/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_Cush_L/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Bolster_Cush_L/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Bolster_Cush_L/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_L/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_Cush_L/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Bolster_Cush_R:
+    status: False
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_R/CustomBeforeLaunch/1/Bolster_Cush_R/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_R/CustomBeforeLaunch/1/Bolster_Cush_R/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_R/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_Cush_R/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Bolster_Cush_R/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Bolster_Cush_R/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_Cush_R/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_Cush_R/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Bolster_BR_L:
+    status: False
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_L/CustomBeforeLaunch/1/Bolster_BR_L/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_L/CustomBeforeLaunch/1/Bolster_BR_L/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_L/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_BR_L/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Bolster_BR_L/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Bolster_BR_L/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_L/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_BR_L/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  Bolster_BR_R:
+    status: False
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_R/CustomBeforeLaunch/1/Bolster_BR_R/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_R/CustomBeforeLaunch/1/Bolster_BR_R/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_R/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_BR_R/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/Bolster_BR_R/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/Bolster_BR_R/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_Bolster_BR_R/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_Bolster_BR_R/Status"
+    position: 0
+    speed: 1
+    delay: 0
+
+  CLA:
+    status: False
+    sub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_CLA/CustomBeforeLaunch/1/CLA/CommandePosition/CmdePosition/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_CLA/CustomBeforeLaunch/1/CLA/ProfilVitessePosition/VitesseVd/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_CLA/Action"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_CLA/Action"
+    pub_topics:
+      position_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Percentage/CLA/Value"
+      speed_topic: "Actium/MQTTAccessV_1_0/Devices/Motors_Position/CAN/Read/Speed/CLA/Value"
+      goto_topic: "Actium/MQTTAccessV_1_0/Scenarios/Custom_GoTo_CLA/Status"
+      stop_topic: "Actium/MQTTAccessV_1_0/Scenarios/Stop_CLA/Status"
+    position: 0
+    speed: 1
+    delay: 0

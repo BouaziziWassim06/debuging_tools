@@ -1,0 +1,131 @@
+{
+    "Data": {
+        "offset": 
+        {   "Type":"list",
+            "value":[0, 0, 0, 0, 0, 0, 0, 0,0,0]
+        },
+        "human_class":
+        {
+            "Type":"dict",
+            "value":    
+            {
+                "Baby": 0,
+                "Child": 1,
+                "perc_5": 2,
+                "perc_50": 3,
+                "perc_95": 4,
+                "Unknown": 5,
+                "Default":6
+            }
+        } ,
+        "init":{
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+    
+        "object_human": {
+            "Type":"dict",
+            "value":    
+            {
+                "empty": 1,
+                "human": 2
+                
+            }
+        },
+        "thorax_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "pelvis_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "thorax_ext_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "fidgetings_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "leaning_forward_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "dissymetry_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        
+        "feet_on_dashboard_alarm": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "asana_status": {
+            "Type":"dict",
+            "value":    
+            {
+                "No": 0,
+                "Yes": 1
+            }
+        },
+        "safe_unsafe": {
+            "Type":"dict",
+            "value":    
+            {
+                "safe": 0,
+                "unsafe": 1
+            }
+        },
+        "driving_mode": {
+            "Type":"dict",
+            "value":    
+            {
+                "No mode": 0,
+                "driving": 1,
+                "automated drive": 2,
+                "relax max": 3
+            }
+        },
+        "sensors_avg": {
+            "Type":"list",
+            "value":[0, 0, 0, 0, 0, 0, 0, 0]
+        }
+    },
+    "parameters": {
+        "host": "127.0.0.1",
+        "port": 5342
+    }
+}

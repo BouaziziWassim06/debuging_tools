@@ -1,0 +1,533 @@
+mqtt:
+  DEFAULT_QOS: 2
+  SUB_TOPICS: {
+    tailorFit_sub: "SM/SEAT/ReAdjustedPosition",
+    tailorFit_start: "SM/Seat/TailorFit/Start",
+    recalculate: "SM/Seat/CalculateOccupantConfig",
+    ready: "SM/Seat/Check/IsReady",
+    reset: "SM/Seat/Reset",
+    pedal_threshold : "SM/Seat/Pedal/Position",
+    estimated_position_reached: "SM/Seat/TailorFit/EstimatedPositionReached",
+    TF_to_SM_Config: "Seat/SM/OccupantConfig",
+    Detected_optimal_config: "Seat/SM/DetectedOptimalConfig"
+    
+  }
+  RETRY_S: 1
+  #HOST: 192.168.1.150
+  HOST: 127.0.0.1
+  PORT: 1883
+  FUNCT_NAME: "MQTT_TESTER"
+
+randomize_values : True 
+   
+journey: 
+
+  Eco : 0.7
+  Comfort: 0.6
+  Sport: 0.9
+  Relax: 0.5
+
+seat_options:
+  S:
+    OccupantConfig:
+        configsPerState:
+          - stateName: "TailorFit"
+            motorization:
+              status: True
+              Backrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              UBA:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Headrest:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Bolster_Cush_L:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_Cush_R:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_L:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"  
+              CLA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"    
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+          - stateName: "Relax"
+            motorization:
+              status: True
+              Backrest:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              UBA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Headrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Bolster_Cush_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_Cush_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"  
+              CLA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"    
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+  M:
+    OccupantConfig:
+      configsPerState:
+          - stateName: "TailorFit"
+            motorization:
+              status: True
+              Backrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+          - stateName: "Relax"
+            motorization:
+              status: True
+              Backrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+  L:
+    OccupantConfig:
+      configsPerState:
+          - stateName: "TailorFit"
+            motorization:
+              status: True
+              Backrest:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              UBA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Headrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Bolster_Cush_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_Cush_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"  
+              CLA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"    
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+          - stateName: "Relax"
+            motorization:
+              status: True
+              Backrest:
+                status: False
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Track:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Height:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Tilt:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              UBA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Headrest:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group B"
+              Bolster_Cush_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_Cush_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_L:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"
+              Bolster_BR_R:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"  
+              CLA:
+                status: True
+                position: 0
+                speed: -1
+                delay: 0
+                group: "Group A"    
+            pneumatics:
+              status: True
+              Neckrest:
+                status: True
+                value: 17
+            vaccust:
+              status: True
+              vaccust1:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+              vaccust2:
+                zone1: 0
+                zone2: 0
+                zone3: 0
+                zone4: 0
+
+lumis:
+  led1:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led2:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led3:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led4:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led5:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led6:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led7:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led8:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+  led9:
+    color: 0x000000
+    brightness: 0x000000
+    animation: 0
+
+vibe:
+  speaker1:
+    music: 0
+    volume: 0
+  speaker2:
+    music: 0
+    volume: 0
+
+optiheat:
+  heatina: 0
+
+camera:
+  category: "LIOV"
+  fps: 30
+  resolution: {
+    width: 1280,
+    height: 920
+  }
+
+pedal:
+  config: "CONFIG"

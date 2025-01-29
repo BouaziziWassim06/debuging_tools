@@ -1,0 +1,122 @@
+mqtt:
+  DEFAULT_QOS: 1
+  SUB_TOPICS: {      All_Off_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_Off/Action",
+      All_On_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_On/Action"}
+  RETRY_S: 1
+  #HOST:  192.168.1.150
+  HOST: 127.0.0.1
+  PORT: 1883
+  FUNCT_NAME: "MQTT_TESTER2"
+
+Motor_Buttons:
+  Backrest:
+    Max: 100
+    Min: 0
+  Height:
+    Max: 100
+    Min: 0
+  Track:
+    Max: 0
+    Min: 100
+  UBA:
+    Max: 100
+    Min: 0
+  Headrest:
+    Max: 100
+    Min: 0
+  Tilt:
+    Max: 100
+    Min: 0
+  Bolster_Cush_L:
+    Max: 100
+    Min: 0
+  Bolster_Cush_R:
+    Max: 100
+    Min: 0
+  Bolster_BR_L:
+    Max: 100
+    Min: 0
+  Bolster_BR_R:
+    Max: 100
+    Min: 0
+  CLA:
+    Max: 100
+    Min: 0
+Other_buttons: ["Steering_wheel","Relax_button","SwitchBox"]
+
+  
+
+
+
+Buttons:
+  All:
+    
+    status: True
+    sub_topics:
+      All_Off_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_Off/Action"
+      All_On_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_On/Action"
+      # Not used for the moment
+
+    pub_topics:
+      All_Off_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_Off/Status"
+      All_On_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_All_On/Status"
+      Steering_wheel_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Wheel/Value"
+      Relax_button_topic: "TBD"    
+      SwitchBox_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/Status"
+
+  G1:
+    Motors : ["Track",Backrest]
+    status: True
+    sub_topics:
+      G1_status_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_Group1/Action"
+
+      # G1_TrackFront_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Track_Front/Value"
+      # G1_TrackRear_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Track_Rear/Value"
+      # G1_BackrestFront_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Backrest_Front/Value"
+      # G1_BackrestRear_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Backrest_Rear/Value"
+    
+    pub_topics:
+      G1_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_Group1/Status"
+
+      Track_topic:
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Track_Front/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Track_Rear/Value"
+      Backrest_topic: 
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Backrest_Front/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Backrest_Rear/Value"
+
+  G2:
+    Motors : ["Height","Tilt","UBA","Headrest"]
+    status: True
+    sub_topics:
+      G2_status_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_Group2/Action"
+
+      # G2_HeightUp_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Height_Up/Value"
+      # G2_HeightDown_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Height_Down/Value"
+      # G2_TiltUp_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Tilt_Up/Value"
+      # G2_TiltDown_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Tilt_Down/Value"
+      # G2_UBAFront_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/UBA_Front/Value"
+      # G2_UBARear_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/UBA_Rear/Value"
+      # G2_HeadrestUp_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Headrest_Up/Value"
+      # G2_HeadrestDown_topic: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Headrest_Down/Value"
+
+    pub_topics:
+      G2_status_topic: "Actium/MQTTAccessV_1_0/Scenarios/Buttons_Group2/Status"
+      Height_topic:
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Height_Up/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Height_Down/Value"
+      Tilt_topic:
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Tilt_Up/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Tilt_Down/Value"
+      UBA_topic:
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/UBA_Front/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/UBA_Rear/Value"
+      UBA_topic:
+        Front: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Headrest_Up/Value"
+        Rear: "Actium/MQTTAccessV_1_0/Devices/SwitchBox/CAN/Read/Buttons/Headrest_Down/Value"
+  Buttons_limitations:
+    sub_topics:
+      Track_limit_topic: "Actium/MQTTAccessV_1_0/Scenarios/track/Config"
+      Backrest_limit_topic: "Actium/MQTTAccessV_1_0/Scenarios/Backrest/Config"
+      Tilt_limit_topic: "Actium/MQTTAccessV_1_0/Scenarios/tilt/Config"
+      security_mode_topic: "Actium/MQTTAccessV_1_0/Scenarios/Activate/SecurityMode"
